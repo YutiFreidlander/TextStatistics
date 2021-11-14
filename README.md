@@ -89,7 +89,7 @@ The results:
 
     'I
       
-7..
+7. Biggest number:   twenty million 
 
 8. Colors:  
     
