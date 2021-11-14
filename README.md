@@ -50,43 +50,44 @@ The results:
 5.2. Most popular word exclude stop words: [('said', 4253)]
 
 6. Longest word sequence without 'k' words:   
-      herself, would have been
-      prostration, and that she would have fallen, in point of fact, a
-      victim.'
 
-      'Now, Dombey! - ' says the Major, resuming his discourse with great
-      energy.
+    herself, would have been
+    prostration, and that she would have fallen, in point of fact, a
+    victim.'
 
-      'I beg your pardon,' interposes Cousin Feenix. 'Allow me another
-      word. My friend Dombey will permit me to say, that if any circumstance
-      could have added to the most infernal state of pain in which I find
-      myself on this occasion, it would be the natural amazement of the
-      world at my lovely and accomplished relative (as I must still beg
-      leave to call her) being supposed to have so committed herself with a
-      person - man with white teeth, in point of fact - of very inferior
-      station to her husband. But while I must, rather peremptorily, request
-      my friend Dombey not to criminate my lovely and accomplished relative
-      until her criminality is perfectly established, I beg to assure my
-      friend Dombey that the family I represent, and which is now almost
-      extinct (devilish sad reflection for a man), will interpose no
-      obstacle in his way, and will be happy to assent to any honourable
-      course of proceeding, with a view to the future, that he may point
-      out. I trust my friend Dombey will give me credit for the intentions
-      by which I am animated in this very melancholy affair, and - a - in
-      point of fact, I am not aware that I need trouble my friend Dombey
-      with any further observations.'
+    'Now, Dombey! - ' says the Major, resuming his discourse with great
+    energy.
 
-      Mr Dombey bows, without raising his eyes, and is silent.
+    'I beg your pardon,' interposes Cousin Feenix. 'Allow me another
+    word. My friend Dombey will permit me to say, that if any circumstance
+    could have added to the most infernal state of pain in which I find
+    myself on this occasion, it would be the natural amazement of the
+    world at my lovely and accomplished relative (as I must still beg
+    leave to call her) being supposed to have so committed herself with a
+    person - man with white teeth, in point of fact - of very inferior
+    station to her husband. But while I must, rather peremptorily, request
+    my friend Dombey not to criminate my lovely and accomplished relative
+    until her criminality is perfectly established, I beg to assure my
+    friend Dombey that the family I represent, and which is now almost
+    extinct (devilish sad reflection for a man), will interpose no
+    obstacle in his way, and will be happy to assent to any honourable
+    course of proceeding, with a view to the future, that he may point
+    out. I trust my friend Dombey will give me credit for the intentions
+    by which I am animated in this very melancholy affair, and - a - in
+    point of fact, I am not aware that I need trouble my friend Dombey
+    with any further observations.'
 
-      'Now, Dombey,' says the Major, 'our friend Feenix having, with an
-      amount of eloquence that Old Joe B. has never heard surpassed - no, by
-      the Lord, Sir! never!' - says the Major, very blue, indeed, and
-      grasping his cane in the middle - 'stated the case as regards the
-      lady, I shall presume upon our friendship, Dombey, to offer a word on
-      another aspect of it. Sir,' says the Major, with the horse's cough,
-      'the world in these things has opinions, which must be satisfied.'
+    Mr Dombey bows, without raising his eyes, and is silent.
 
-      'I
+    'Now, Dombey,' says the Major, 'our friend Feenix having, with an
+    amount of eloquence that Old Joe B. has never heard surpassed - no, by
+    the Lord, Sir! never!' - says the Major, very blue, indeed, and
+    grasping his cane in the middle - 'stated the case as regards the
+    lady, I shall presume upon our friendship, Dombey, to offer a word on
+    another aspect of it. Sir,' says the Major, with the horse's cough,
+    'the world in these things has opinions, which must be satisfied.'
+
+    'I
       
 7..
 
