@@ -64,7 +64,7 @@ def unique_words_set():
     counter = 0
     unique_set = set()
     temp_set = set()
-    for token in word_tokens:  # tokenizer_words.tokenize(text):  # "(w.lower() for w in tokens):
+    for token in word_tokens: # tokenizer_words.tokenize(text):  # "(w.lower() for w in tokens):
         if token in unique_set:
             if token not in temp_set:
                 temp_set.add(token)
@@ -145,7 +145,73 @@ def popular_name():
             max_item = item
     return max_item, max
 
+def text2int(textnum, numwords={}):
+    if not numwords:
+        units = [
+        "zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
+        "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+        "sixteen", "seventeen", "eighteen", "nineteen",
+        ]
 
+        tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+        scales = ["hundred", "thousand", "million", "billion", "trillion"]
+
+        numwords["and"] = (1, 0)
+        for idx, word in enumerate(units): numwords[word] = (1, idx)
+        for idx, word in enumerate(tens): numwords[word] = (1, idx * 10)
+        for idx, word in enumerate(scales): numwords[word] = (10 ** (idx * 3 or 2), 0)
+
+    current = result = 0
+    for word in textnum.split():
+        if word not in numwords:
+            print("#############: ", word)
+            # raise Exception("Illegal word: " + word)
+
+        scale, increment = numwords[word]
+        current = current * scale + increment
+        if scale > 100:
+            result += current
+            current = 0
+    return result + current
+
+
+def clean_verbal_num(token):
+    token = token.replace('-', ' ')
+    token = token.replace('\n', ' ')
+    token = token.replace(' and', ' ')
+    token = token.replace('.', ' ')
+    token = token.replace(':', ' ')
+    token = token.replace(';', ' ')
+    token = token.replace('!', ' ')
+    token = token.replace('?', ' ')
+    token = token.replace("'", ' ')
+    token = token.replace('"', ' ')
+    token = token.replace(',', ' ')
+    return token
+
+
+def num_tokenized():
+    tokens = nltk.tokenize.regexp_tokenize(text, r'(( |\'|\")((((eleven)|(twelve)|(thirteen)|(fourteen)|(fifteen)|(sixteen)|(seventeen)|(eighteen)|(nineteen)|(twenty)|(thirty)|(forty)|(fifty)|(sixty)|(seventy)|(eighty)|(ninety)|(hundred)|(thousand)|(million)|(billion)|(trillion)|(zero)|(one)|(two)|(three)|(four)|(five)|(six)|(seven)|(eight)|(nine)|(ten)))( |-|\n|(and)|\.|,|:|;|\!|\?|\'|\")+)+)')
+    tokens = [token[0] for token in tokens]
+    tokens = [clean_verbal_num(token) for token in tokens]
+    return tokens
+
+
+def num_int_tokenized():
+    tokens = nltk.tokenize.regexp_tokenize(text, r'\d+')
+    return tokens
+
+
+def biggest_number():
+    num_tokens = num_tokenized()
+    numbers = lambda sentence: text2int(sentence)
+    max_verb = max(num_tokens, key=numbers)  # longest_sen, len(longest_sen)
+    num_int_tokens = num_int_tokenized()
+    max_int = max(num_int_tokens)
+    if int(text2int(max_verb)) >= int(max_int):
+        return max_verb
+    return max_int
 
 
 print("1. Lines count:", lines_count())  # count?
@@ -156,8 +222,7 @@ print("4.2. Longest sentence: ", longest_sent())
 print("5.1. Most popular word:", popular_word(0))
 print("5.2. Most popular word exclude stop words:", popular_word(1))
 print("6. Longest word sequence without 'k' words: ", longest_non_k_seq())
-print("7. ")
+print("7. Biggest number: ", biggest_number())
 print("8. Colors: ", popualr_color())
 print("9.1. Names:", extract_names())
 print("9.2. Most popular name: ", popular_name())
-
